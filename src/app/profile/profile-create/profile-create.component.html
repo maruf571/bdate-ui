@@ -1,0 +1,56 @@
+<div class="row mt-2">
+  <div class="card col-sm-9 col-md-7  mx-auto">
+    <div class="card-body">
+      <h5 class="card-title text-center">Update profile</h5>
+      <hr/>
+      <form name="form" #f="ngForm"
+            (ngSubmit)="f.form.valid && onSubmit(profile)" novalidate>
+
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="name" #name="ngModel" [(ngModel)]="profile.name"
+                 class="form-control" required/>
+          <div *ngIf="f.submitted && name.invalid" style="color:red;">
+            <div *ngIf="name.errors.required">Name is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <select name="gender" #gender="ngModel" [(ngModel)]="profile.gender"
+                  class="form-control" required>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+          <div *ngIf="f.submitted && gender.invalid" style="color:red;">
+            <div *ngIf="gender.errors.required">Gender is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>DOB</label>
+          <input type="date" name="dateOfBirth" #dateOfBirth="ngModel" [(ngModel)]="profile.dateOfBirth"
+                 class="form-control" required>
+          <div *ngIf="f.submitted && dateOfBirth.invalid" style="color:red;">
+            <div *ngIf="dateOfBirth.errors.required">Date of birth is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div>
+            <label>Profile picture</label>
+            <input type="file" class="form-control">
+          </div>
+        </div>
+
+        <div class="float-left mt-2">
+          <button class="btn btn-primary mr-2">Save</button>
+          <button class="btn btn-default" routerLink="/{{appUrl.profile}}">Cancel</button>
+        </div>
+
+      </form>
+
+    </div>
+    <div *ngIf="error" class="mt-2 alert alert-danger">{{error}}</div>
+  </div>
+</div>

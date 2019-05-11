@@ -1,0 +1,36 @@
+<div class="row" class="mt-2">
+  <div class="card col-sm-9 col-md-7  mx-auto">
+    <div class="card-body">
+      <h5 class="card-title text-center">Profile</h5>
+      <hr />
+      <div class="fieldset">
+
+        <div>
+          <img src="{{profile.mainImage}}" />
+        </div>
+        <dl class="row">
+          <dt class="col-sm-3">Name</dt>
+          <dd class="col-sm-9">{{profile.name}}</dd>
+
+          <dt class="col-sm-3">Gender</dt>
+          <dd class="col-sm-9">{{profile.gender}}</dd>
+
+          <dt class="col-sm-3">Date of birth</dt>
+          <dd class="col-sm-9">{{profile.dateOfBirth}}</dd>
+
+          <dt class="col-sm-3 text-truncate">Profile picture</dt>
+          <dd class="col-sm-9"></dd>
+
+        </dl>
+
+        <div class="float-left">
+          <a [routerLink]="['/' + appUrl.profile_update]" [queryParams]="{ id: profile.id }">Update</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
