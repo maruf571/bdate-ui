@@ -17,7 +17,11 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   profileRex = new RegExp(ApiURL.profile);
   peopleRex = new RegExp(ApiURL.people);
   interestRex = new RegExp(ApiURL.interested);
-  crushedRex = new RegExp(ApiURL.crushed)
+  interestReqRex = new RegExp(ApiURL.interested_request);
+
+  crushedRex = new RegExp(ApiURL.crushed);
+  crushedReqRex = new RegExp(ApiURL.crushed_request);
+
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const { url, method, headers, body } = request;
@@ -32,6 +36,14 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
       case url.endsWith(ApiURL.login):
         fs = new FakeLoginService();
+        break;
+
+      case url.match(this.crushedReqRex) != null:
+        fs = new FakeCrushedService();
+        break;
+
+      case url.match(this.interestReqRex) != null:
+        fs = new FakeCrushedService();
         break;
 
       case url.match(this.crushedRex) != null:

@@ -4,15 +4,17 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {AppURL} from "../../AppURL";
 import {Profile} from "../../profile/profile";
 import {CrushedService} from "../crushed-service";
+import {faCoffee} from "@fortawesome/free-solid-svg-icons/faCoffee";
 
 @Component({
-  selector: 'app-interested-list',
-  templateUrl: './crash-list.component.html',
-  styleUrls: ['./crash-list.component.css']
+  selector: 'app-interested-requested-list',
+  templateUrl: './crush-requested.component.html',
+  styleUrls: ['./crush-requested.component.css']
 })
-export class CrashListComponent implements OnInit {
+export class CrushRequestedComponent implements OnInit {
   profiles: Profile[] = [];
   appUrl = AppURL;
+
   constructor(
     private titleService: Title,
     private router: Router,
@@ -21,7 +23,7 @@ export class CrashListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.crushedService.findAll()
+    this.crushedService.findAllRequest()
       .subscribe(
         resp => this.profiles = resp
       )

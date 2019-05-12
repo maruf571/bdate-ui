@@ -9,11 +9,13 @@ import {PublicLayoutComponent} from './public-layout/public-layout.component';
 import {AuthLayoutComponent} from './auth-layout/auth-layout.component';
 import {AuthService} from "../auth/auth.service";
 import {PrivateLayoutComponent} from "./private-layout/private-layout.component";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    FontAwesomeModule,
   ],
   declarations: [
     FooterComponent,
@@ -23,6 +25,7 @@ import {PrivateLayoutComponent} from "./private-layout/private-layout.component"
     PublicLayoutComponent,
     AuthLayoutComponent,
     PrivateLayoutComponent,
+
   ],
   exports: [
     FooterComponent,

@@ -10,11 +10,15 @@ import {PeopleHomeComponent} from "./home/people-home.component";
 import {PeopleService} from "./people.service";
 import {AuthGuard} from "../auth/auth-guard";
 import {InterestedListComponent} from "./interested/interested-list.component";
-import {CrashListComponent} from "./crashed/crash-list.component";
 import {InterestedButtonComponent} from "./common/interested-button.component";
 import {CrushedButtonComponent} from "./common/crushed-button.component";
 import {InterestedService} from "./interested-service";
 import {CrushedService} from "./crushed-service";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {CrushListComponent} from "./crushed/crush-list.component";
+import {CrushRequestedComponent} from "./crushed-request/crush-requested.component";
+import {InterestedRequestedComponent} from "./interested-request/interested-requested.component";
+
 
 
 @NgModule({
@@ -23,14 +27,18 @@ import {CrushedService} from "./crushed-service";
     FormsModule,
     PeopleRoutingModule,
     LayoutModule,
+    FontAwesomeModule
   ],
   declarations: [
     PeopleHomeComponent,
     PeopleProfileComponent,
     InterestedListComponent,
-    CrashListComponent,
+    CrushListComponent,
     InterestedButtonComponent,
+    InterestedRequestedComponent,
     CrushedButtonComponent,
+    CrushRequestedComponent,
+
   ],
   exports: [
   ],

@@ -12,6 +12,10 @@ export class ApiURL {
   public static  profile = environment.BASE_URL + '/profiles/';
   public static  people = environment.BASE_URL + '/people/';
 
+
   public static  interested = environment.BASE_URL + '/people/interested/';
+  public static  interested_request = environment.BASE_URL + '/people/interested/request/';
+
   public static  crushed = environment.BASE_URL + '/people/crushed/';
+  public static  crushed_request = environment.BASE_URL + '/people/crushed/request/';
 }

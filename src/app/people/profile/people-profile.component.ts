@@ -37,7 +37,7 @@ export class PeopleProfileComponent implements OnInit {
 
   }
 
-  addToCrashList(profile: Profile) {
+  addToCrushList(profile: Profile) {
 
   }
 }

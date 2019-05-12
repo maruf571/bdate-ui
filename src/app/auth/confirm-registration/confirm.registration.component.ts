@@ -20,10 +20,10 @@ export class ConfirmRegistrationComponent implements OnInit {
         private router: Router) {}
 
     ngOnInit() {
+      // get token from url
 
-        // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+      // set post request to the server
+
+      // if response is ok, show congratulations message or show sorry message
     }
-
-
 }

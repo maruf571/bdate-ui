@@ -6,11 +6,11 @@ import {Profile} from "../../profile/profile";
 import {InterestedService} from "../interested-service";
 
 @Component({
-  selector: 'app-interested-list',
-  templateUrl: './interested-list.component.html',
-  styleUrls: ['./interested-list.component.css']
+  selector: 'app-interested-requested-list',
+  templateUrl: './interested-requested.component.html',
+  styleUrls: ['./interested-requested.component.css']
 })
-export class InterestedListComponent implements OnInit {
+export class InterestedRequestedComponent implements OnInit {
   profiles: Profile[] = [];
   appUrl = AppURL;
   constructor(
@@ -21,7 +21,7 @@ export class InterestedListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.interestedService.findAll()
+    this.interestedService.findAllRequest()
       .subscribe(
         resp => this.profiles = resp
       );

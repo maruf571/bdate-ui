@@ -15,6 +15,10 @@ export class InterestedService {
     return this.http.get(ApiURL.interested);
   }
 
+  findAllRequest(): Observable<any>{
+    return this.http.get(ApiURL.interested_request);
+  }
+
   addToInterestedList(profileId: string): Observable<any> {
     return this.http.post(ApiURL.interested + profileId, {profileId: profileId});
   }

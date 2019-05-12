@@ -9,6 +9,7 @@ import {FakeBackendInterceptor} from "./mock/fake-backend-interceptor";
 import {environment} from "../environments/environment";
 import {HttpRequestInterceptor} from "./http-request-interceptor";
 import {AuthInterceptor} from "./auth/auth-interceptor";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 
 @NgModule({

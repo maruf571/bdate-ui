@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import {AppURL} from "../../AppURL";
+import {faBell} from "@fortawesome/free-solid-svg-icons/faBell";
 
 @Component({
   selector: 'app-private-layout',
@@ -8,5 +9,6 @@ import {AppURL} from "../../AppURL";
 })
 export class PrivateLayoutComponent{
   appUrl = AppURL;
+  bell = faBell;
 
 }

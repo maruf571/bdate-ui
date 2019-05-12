@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="col-sm-9 col-md-7 mx-auto">
-    <h5 class="card-title text-center">Crushed</h5>
+    <h5 class="card-title text-center">Pending Interested Request</h5>
     <hr />
   </div>
 </div>
@@ -18,17 +18,15 @@
             <div class="row">
               <div class="col-sm-3">
                 <figure>
-                  <img width="150px" src="{{profile.mainImage}}" alt="">
+                  <img width="100px" src="{{profile.mainImage}}" alt="">
                 </figure>
               </div>
               <div class="col-sm-7">
                 <div class="friend-name">
                   <a [routerLink]="['/' + appUrl.people_profile]" [queryParams]="{ id: profile.id }">{{profile.name}}</a>
                 </div>
-                <div class="description">{{profile.description}}</div>
                 <div class="mt-2">
-
-                  <button (click)="removeFromList(profile)">Remove</button>
+                  <button class="mr-2" (click)="removeFromList(profile)">Cancel</button>
                 </div>
               </div>
 

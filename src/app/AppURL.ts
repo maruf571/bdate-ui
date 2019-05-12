@@ -22,13 +22,17 @@ export class AppURL {
   public static  people =  'people';
   public static update = 'update';
   public static interested = 'interested';
-  public static crashed = 'crashed';
+  public static crushed = 'crushed';
+  public static request = 'request';
 
   public static  profile_update = AppURL.profile +'/' + AppURL.update;
 
   public static  people_profile = AppURL.people +'/' + AppURL.profile;
   public static  people_interested = AppURL.people +'/' + AppURL.interested;
-  public static  people_crashed = AppURL.people +'/' + AppURL.crashed;
+  public static  people_crushed = AppURL.people +'/' + AppURL.crushed;
+
+  public static  people_interested_request = AppURL.people +'/' + AppURL.interested +'/'+ AppURL.request;
+  public static  people_crushed_request = AppURL.people +'/' + AppURL.crushed +'/'+ AppURL.request;
 
 
 

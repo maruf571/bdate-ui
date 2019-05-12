@@ -2,7 +2,6 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {ApiURL} from "../ApiURL";
-import {Profile} from "../profile/profile";
 
 
 @Injectable()
@@ -11,10 +10,15 @@ export class CrushedService {
   constructor(private http: HttpClient) {
   }
 
-  findAll(){
+  findAll(): Observable<any>{
     return this.http.get(ApiURL.crushed);
   }
-  addToCrashList(profileId: string): Observable<any> {
+
+  findAllRequest(): Observable<any>{
+    return this.http.get(ApiURL.crushed_request);
+  }
+
+  addToList(profileId: string): Observable<any> {
       return this.http.post(ApiURL.crushed + profileId, {profileId: profileId})
   }
 
