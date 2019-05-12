@@ -2,14 +2,14 @@
   <div class="navbar navbar-dark bg-dark box-shadow">
       <div class="container d-flex justify-content-between">
           <a routerLink="/" class="navbar-brand d-flex align-items-center">
-              <strong>BDATE</strong>
+              <strong>BDATE public</strong>
           </a>
 
           <nav>
-              <a *ngIf="isLogin" class="p-2"  routerLink="/{{appUrl.people}}">People</a>
+              <a *ngIf="isLogin"  class="p-2"  routerLink="/{{appUrl.people}}">People</a>
               <a *ngIf="!isLogin" class="p-2 " routerLink="/{{appUrl.auth_registration}}">Registration</a>
               <a *ngIf="!isLogin" class="p-2 " routerLink="/{{appUrl.auth_login}}">Login</a>
-              <a *ngIf="isLogin" class="p-2"  routerLink="/{{appUrl.auth_logout}}">Logout</a>
+              <a *ngIf="isLogin"  class="p-2"  routerLink="/{{appUrl.auth_logout}}">Logout</a>
           </nav>
       </div>
   </div>

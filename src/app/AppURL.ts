@@ -21,9 +21,14 @@ export class AppURL {
   public static  profile = 'profile';
   public static  people =  'people';
   public static update = 'update';
+  public static interested = 'interested';
+  public static crashed = 'crashed';
+
+  public static  profile_update = AppURL.profile +'/' + AppURL.update;
 
   public static  people_profile = AppURL.people +'/' + AppURL.profile;
-  public static  profile_update = AppURL.profile +'/' + AppURL.update;
+  public static  people_interested = AppURL.people +'/' + AppURL.interested;
+  public static  people_crashed = AppURL.people +'/' + AppURL.crashed;
 
 
 

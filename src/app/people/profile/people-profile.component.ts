@@ -14,21 +14,30 @@ export class PeopleProfileComponent implements OnInit {
 
   appUrl = AppURL;
   profile: Profile;
+
   constructor(
     private titleService: Title,
     private router: Router,
     private activeRoute: ActivatedRoute,
     private peopleService: PeopleService,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
-    const id:string = this.activeRoute.snapshot.queryParamMap.get('id');
-    if(id != null) {
+    const id: string = this.activeRoute.snapshot.queryParamMap.get('id');
+    if (id != null) {
       this.peopleService.findById(id)
         .subscribe(
           resp => this.profile = resp
         )
     }
+  }
+
+  addToInterestedList(profile: Profile) {
+
+  }
+
+  addToCrashList(profile: Profile) {
 
   }
 }

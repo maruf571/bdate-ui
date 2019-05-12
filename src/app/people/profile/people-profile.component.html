@@ -22,8 +22,9 @@
         </dl>
 
         <div>
-          <a class="btn btn-primary" routerLink="/{{appUrl.people_profile}}">Interested</a>
-          <a class="btn btn-default" routerLink="/{{appUrl.profile}}">Back</a>
+          <app-interested-button class="mr-2" [profile]="profile"></app-interested-button>
+          <app-crushed-button [profile]="profile"></app-crushed-button>
+          <a class="btn btn-default" routerLink="/{{appUrl.people}}">Back</a>
         </div>
 
       </div>

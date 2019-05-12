@@ -9,6 +9,13 @@ import {PeopleProfileComponent} from "./profile/people-profile.component";
 import {PeopleHomeComponent} from "./home/people-home.component";
 import {PeopleService} from "./people.service";
 import {AuthGuard} from "../auth/auth-guard";
+import {InterestedListComponent} from "./interested/interested-list.component";
+import {CrashListComponent} from "./crashed/crash-list.component";
+import {InterestedButtonComponent} from "./common/interested-button.component";
+import {CrushedButtonComponent} from "./common/crushed-button.component";
+import {InterestedService} from "./interested-service";
+import {CrushedService} from "./crushed-service";
+
 
 @NgModule({
   imports: [
@@ -19,13 +26,19 @@ import {AuthGuard} from "../auth/auth-guard";
   ],
   declarations: [
     PeopleHomeComponent,
-    PeopleProfileComponent
+    PeopleProfileComponent,
+    InterestedListComponent,
+    CrashListComponent,
+    InterestedButtonComponent,
+    CrushedButtonComponent,
   ],
   exports: [
   ],
   providers:[
     Title,
     PeopleService,
+    CrushedService,
+    InterestedService,
     AuthGuard,
   ]
 })

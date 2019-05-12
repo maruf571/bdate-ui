@@ -6,6 +6,8 @@ import {PrivateLayoutComponent} from "../layout/private-layout/private-layout.co
 import {AuthGuard} from "../auth/auth-guard";
 import {AppURL} from "../AppURL";
 import {UserRole} from "../UserRole";
+import {CrashListComponent} from "./crashed/crash-list.component";
+import {InterestedListComponent} from "./interested/interested-list.component";
 
 const routes: Routes = [
   {
@@ -16,7 +18,9 @@ const routes: Routes = [
     },
     children:[
       { path:'', component: PeopleHomeComponent },
-      { path:AppURL.profile, component: PeopleProfileComponent }
+      { path:AppURL.profile, component: PeopleProfileComponent },
+      { path:AppURL.interested, component: InterestedListComponent },
+      { path:AppURL.crashed, component: CrashListComponent }
     ]
   },
 ];

@@ -16,13 +16,30 @@ export class FakePeopleService implements FakeService {
       mainImage: "/assets/mock/42709532_298675120729615_8991445284634492928_n.jpg"
     },
     {
+      id: "123456789",
+      name: "Laboni Aktar",
+      gender: "Female",
+      dateOfBirth: "1980-01-02",
+      description: "You can book your test drive by our official website",
+      mainImage: "/assets/mock/download.jpeg"
+    },
+    {
+      id: "56789123",
+      name: "Karim Islam",
+      gender: "Male",
+      dateOfBirth: "1990-01-02",
+      mainImage: "assets/mock/zbKmLFDN.jpg",
+      description: "the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website"
+    },
+    {
       id: "910112131415",
       name: "Sahina Begam",
       gender: "Female",
       dateOfBirth: "1980-01-02",
       mainImage: "assets/mock/12345.jpeg",
       description: "the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website"
-    }];
+    }
+    ];
 
   process(request: HttpRequest<any>){
     const { url, method, headers, body } = request;

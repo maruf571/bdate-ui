@@ -7,12 +7,21 @@ import {ApiURL} from "../ApiURL";
 import {FakeRegistrationService} from "./auth/registration/fake-registration-service";
 import {FakeLoginService} from "./auth/login/fake-login-service";
 import {FakePeopleService} from "./people/fake-people-service";
+import {FakeInterestedService} from "./people/fake-interested-service";
+import {FakeCrushedService} from "./people/fake-crushed-service";
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
 
+  // Regex
+  profileRex = new RegExp(ApiURL.profile);
+  peopleRex = new RegExp(ApiURL.people);
+  interestRex = new RegExp(ApiURL.interested);
+  crushedRex = new RegExp(ApiURL.crushed)
+
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const { url, method, headers, body } = request;
+
 
     console.log(url)
     let fs: FakeService;
@@ -25,11 +34,19 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         fs = new FakeLoginService();
         break;
 
-      case url.match(/\/profiles\/*/) != null:
+      case url.match(this.crushedRex) != null:
+        fs = new FakeCrushedService();
+        break;
+
+      case url.match(this.interestRex) != null:
+        fs = new FakeInterestedService();
+        break;
+
+      case url.match(this.profileRex) != null:
         fs = new FakeProfileService();
         break;
 
-      case url.match(/\/people\/*/) != null:
+      case url.match(this.peopleRex) != null:
         fs = new FakePeopleService();
         break;
 

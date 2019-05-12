@@ -1,3 +1,25 @@
+<header>
+  <div class="navbar navbar-dark bg-dark box-shadow">
+    <div class="container d-flex justify-content-between">
+      <a routerLink="/{{appUrl.people}}" class="navbar-brand d-flex align-items-center">
+        <strong>BDATE private</strong>
+      </a>
+
+      <nav>
+        <a class="p-2"  routerLink="/{{appUrl.people}}"> People</a>
+        <a class="p-2"  routerLink="/{{appUrl.people_interested}}"> Interested</a>
+        <a class="p-2"  routerLink="/{{appUrl.people_crashed}}"> Crash</a>
+        <a class="p-2"  routerLink="/{{appUrl.profile}}">Profile</a>
+        <a class="p-2"  routerLink="/{{appUrl.auth_logout}}">Logout</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="">
+  <router-outlet></router-outlet>
+</div>
+
+
 <!--
 <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark box-shadow ">
@@ -32,21 +54,3 @@
 -->
 
 
-<header>
-  <div class="navbar navbar-dark bg-dark box-shadow">
-    <div class="container d-flex justify-content-between">
-      <a routerLink="/{{appUrl.people}}" class="navbar-brand d-flex align-items-center">
-        <strong>BDATE</strong>
-      </a>
-
-      <nav>
-        <a class="p-2"  routerLink="/{{appUrl.people}}">People</a>
-        <a class="p-2"  routerLink="/{{appUrl.profile}}">Profile</a>
-        <a class="p-2"  routerLink="/{{appUrl.auth_logout}}">Logout</a>
-      </nav>
-    </div>
-  </div>
-</header>
-<div class="">
-  <router-outlet></router-outlet>
-</div>

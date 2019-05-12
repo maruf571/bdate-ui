@@ -20,7 +20,6 @@ const routes: Routes = [
       { path: AppURL.confirm_registration, component: ConfirmRegistrationComponent },
       { path: AppURL.forgot_password, component: ForgotPasswordComponent },
       { path: AppURL.forbidden, component: ForbiddenComponent },
-
     ]
   },
 ];
